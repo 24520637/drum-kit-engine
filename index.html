@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drum Kit Engine">
+  <title>Drum Kit Engine</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="drum-kit">
+    <h1>Drum Kit</h1>
+
+    <section class="drum-pad-grid" aria-label="Drum pads">
+      <button class="drum-pad" type="button" data-key="Q" data-sound="kick">
+        <kbd>Q</kbd>
+        <span>Kick</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="W" data-sound="snare">
+        <kbd>W</kbd>
+        <span>Snare</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="E" data-sound="hi-hat">
+        <kbd>E</kbd>
+        <span>Hi-Hat</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="A" data-sound="tom">
+        <kbd>A</kbd>
+        <span>Tom</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="S" data-sound="clap">
+        <kbd>S</kbd>
+        <span>Clap</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="D" data-sound="crash">
+        <kbd>D</kbd>
+        <span>Crash</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="Z" data-sound="ride">
+        <kbd>Z</kbd>
+        <span>Ride</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="X" data-sound="floor-tom">
+        <kbd>X</kbd>
+        <span>Floor Tom</span>
+      </button>
+
+      <button class="drum-pad" type="button" data-key="C" data-sound="percussion">
+        <kbd>C</kbd>
+        <span>Percussion</span>
+      </button>
+    </section>
+
+    <section class="transport-controls" aria-label="Recorder controls">
+      <button type="button" class="control-button" id="record-button">Record</button>
+      <button type="button" class="control-button" id="play-button">Play</button>
+      <button type="button" class="control-button" id="stop-button">Stop</button>
+      <button type="button" class="control-button" id="clear-button">Clear</button>
+    </section>
+  </main>
+</body>
+</html>
