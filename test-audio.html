@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Audio Engine</title>
+</head>
+<body>
+  <h1>Test Module 2 - Audio Engine</h1>
+  <button id="btn-kick">Test Kick</button>
+  <button id="btn-snare">Test Snare</button>
+
+  <script type="module">
+    import { AudioEngine } from "./js/audio-engine.js";
+
+    // Khởi tạo AudioEngine
+    const audioEngine = new AudioEngine();
+
+    // Tải trước 2 file audio
+    const result = await audioEngine.preload({
+  kick: "./assets/sounds/kick.wav",
+  snare: "./assets/sounds/snare.wav"
+});
+
+    console.log("Kết quả preload:", result);
+
+    // Gán sự kiện cho các nút test
+    document.getElementById("btn-kick").addEventListener("click", async () => {
+      await audioEngine.unlock();
+      audioEngine.play("kick");
+    });
+
+    document.getElementById("btn-snare").addEventListener("click", async () => {
+      await audioEngine.unlock();
+      audioEngine.play("snare");
+    });
+  </script>
+</body>
+</html>
